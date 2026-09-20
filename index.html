@@ -155,6 +155,14 @@ mark{background:var(--mark-a);color:inherit;padding:.06em .18em;border-radius:1p
   white-space:nowrap;
 }
 .chip b{color:var(--ink);font-weight:500}
+a.chip:hover{border-color:var(--accent)}
+.topline{display:flex;gap:14px;align-items:center;justify-content:space-between}
+.tt{
+  font-family:var(--f-mono);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-muted);background:var(--surface);border:1px solid var(--rule);
+  border-radius:3px;padding:5px 11px;cursor:pointer;white-space:nowrap;
+}
+.tt:hover{border-color:var(--accent);color:var(--accent)}
 
 /* ---------- imagery ---------- */
 figure{margin:0}
@@ -511,7 +519,10 @@ a.shotlink:hover .shot{border-color:var(--accent)}
   <header class="masthead">
     <div class="mast-grid">
     <div>
-    <div class="eyebrow">Portfolio &middot; Multilingual Learner Specialist</div>
+    <div class="topline">
+      <div class="eyebrow">Portfolio &middot; Multilingual Learner Specialist</div>
+      <button class="tt" id="theme-toggle" type="button" aria-label="Switch colour theme">Theme</button>
+    </div>
     <h1>Ben Fynes-Clinton</h1>
     <div class="role">EAL/D &amp; Multilingual Learner Specialist &middot; Perth, WA</div>
 
@@ -525,6 +536,10 @@ a.shotlink:hover .shot{border-color:var(--accent)}
       <span class="chip">WIDA <b>Entering &rarr; Bridging</b></span>
       <span class="chip">TRBWA <b>registration in progress</b></span>
       <span class="chip">Australian citizen &middot; <b>full working rights</b></span>
+    </div>
+    <div class="status" style="margin-top:14px">
+      <a class="chip" style="text-decoration:none" href="mailto:bfynesclinton@gmail.com"><b>bfynesclinton@gmail.com</b></a>
+      <a class="chip" style="text-decoration:none" href="tel:+61434843536"><b>0434 843 536</b></a>
     </div>
     </div>
     <img class="portrait" src="assets/portrait.jpg" alt="Ben Fynes-Clinton" width="620" height="620">
@@ -542,120 +557,7 @@ a.shotlink:hover .shot{border-color:var(--accent)}
     <!-- 01 -->
     <article class="piece">
       <div class="piece-id">
-        <div class="num">01 &mdash; Framework</div>
-        <h3>Principles for Good MLL Assessment Scaffolding</h3>
-        <div class="piece-meta">Written 2026<br>My own working method<br>Shared with the MLL team</div>
-      </div>
-      <div class="frame">
-        <div class="frame-row">
-          <div class="eyebrow">The demand</div>
-          <p>I needed a consistent answer to the question that actually matters, and I needed it to be the same answer every time: at what point does support stop being support and start doing the thinking for the student? Working it out case by case produces scaffolds that drift.</p>
-        </div>
-        <div class="frame-row">
-          <div class="eyebrow">What I did</div>
-          <p>Wrote the method down for myself. Three stages &mdash; understand what was taught, analyse the mainstream assessment, then make deliberate scaffold decisions <em>before</em> building anything. Eight design principles and a quality checklist underneath. I then used the document as the <em>specification</em> for AI-assisted scaffold production, so the same standard applied whether I built a booklet by hand or with a tool. <mark>Writing my method down precisely enough that a machine could follow it is what made it repeatable.</mark></p>
-        </div>
-        <div class="frame-row">
-          <div class="eyebrow">What it shows</div>
-          <p>The principles are counterintuitive in a way that only comes from doing the work. One of them is about visual weight: <mark>if the mainstream handout has one organiser and a list of frames, the scaffolded version should also look like one organiser and a list of frames.</mark> More visible sections read as <em>harder</em> to a student, even when every section is simpler. Good scaffolding is invisible support &mdash; a helping hand, not a different task.</p>
-          <p style="margin-top:10px">That principle is a graphic design judgement applied to assessment equity, and I notice it because I trained as a designer before I trained as a teacher.</p>
-          <div class="docs"><span class="lbl">Read</span><a class="dl page" href="evidence/principles-assessment-scaffolding.html">The full framework</a></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- 02 -->
-    <article class="piece">
-      <div class="piece-id">
-        <div class="num">02 &mdash; Assessment design</div>
-        <h3>Silk Road Narrative, Tier 1 / 2 / 3</h3>
-        <div class="piece-meta">Grade 4 performance task<br>Social Studies + English<br>Three scaffold levels, one rubric</div>
-      </div>
-      <div class="frame">
-        <div class="frame-row">
-          <div class="eyebrow">The demand</div>
-          <p>A narrative performance task assessed across two subjects at once, for a cohort spanning WIDA Entering to Bridging. The standard could not move. The rubric could not move.</p>
-        </div>
-        <div class="frame-row">
-          <div class="eyebrow">What I did</div>
-          <p>Built three versions of the booklet. Put them side by side and the claim checks itself &mdash; the task prompt is <mark>word for word identical</mark> in all three.</p>
-        </div>
-
-        <div class="tiers">
-          <div class="tiers-prompt">
-            <div class="eyebrow">Identical in Tier 1, 2 and 3</div>
-            <blockquote>&ldquo;You are a storyteller. Tell the story of a merchant's journey along the Silk Road &mdash; the people, the problems, the choices, and what trade changed.&rdquo;</blockquote>
-          </div>
-          <div class="tiers-grid">
-            <div class="tier">
-              <a class="shotlink" href="evidence/silk-road-tier-1.pdf"><img class="shot" src="assets/silk-road-t1.jpg" alt="Tier 1 booklet page: dense prose describing Silk Road locations, with a four-column planning table" width="760" height="984" loading="lazy"></a>
-              <div class="tier-label">Tier 1 <span>&mdash; mainstream</span></div>
-              <ul>
-                <li>Plans independently from a <b>dense block of location prose</b> &mdash; Samarkand, the Pamir passes at 4,600m, Baghdad in the Golden Age</li>
-                <li>Process is implicit; the student decides how to work</li>
-                <li>Writes from a blank page</li>
-              </ul>
-            </div>
-            <div class="tier">
-              <a class="shotlink" href="evidence/silk-road-tier-2.pdf"><img class="shot" src="assets/silk-road-t2.jpg" alt="Tier 2 booklet page: mentor paragraph, a find task, and sentence starters above blank writing lines" width="760" height="984" loading="lazy"></a>
-              <div class="tier-label">Tier 2</div>
-              <ul>
-                <li>Same four parts, each given <b>an explicit job</b> &mdash; the Beginning is <em>who you are and why you are going</em></li>
-                <li>Work chunked into <b>three named sessions</b></li>
-                <li>Each session runs <b>READ &rarr; FIND &rarr; WRITE</b> against a mentor paragraph</li>
-              </ul>
-            </div>
-            <div class="tier">
-              <a class="shotlink" href="evidence/silk-road-tier-3.pdf"><img class="shot" src="assets/silk-road-t3.jpg" alt="Tier 3 booklet page: the same mentor paragraph with a fill-in-the-blanks paragraph and a self-check row" width="760" height="984" loading="lazy"></a>
-              <div class="tier-label">Tier 3</div>
-              <ul>
-                <li>Same structure as Tier 2, with the Beginning reduced to <em>who you are and <b>where</b> you are going</em></li>
-                <li>Mentor paragraph supplied for every part</li>
-                <li>Writing happens in <b>completion frames</b>, not open prose</li>
-              </ul>
-            </div>
-          </div>
-          <div class="tiers-note">Same page of the same task in each booklet. What changes across the tiers is that the writing <em>process</em> becomes visible and the language gets supplied. What never changes is the task, the four-part narrative structure, or what the rubric rewards.</div>
-        </div>
-
-        <div class="frame-row">
-          <div class="eyebrow">The booklets</div>
-          <div class="docs"><a class="dl" href="evidence/silk-road-tier-1.pdf">Tier 1 &middot; mainstream</a><a class="dl" href="evidence/silk-road-tier-2.pdf">Tier 2</a><a class="dl" href="evidence/silk-road-tier-3.pdf">Tier 3</a></div>
-        </div>
-        <div class="frame-row">
-          <div class="eyebrow">What it shows</div>
-          <p>This is the hardest thing to claim credibly in an interview and the easiest to demonstrate on paper: differentiation that reduces the language barrier without reducing the standard.</p>
-        </div>
-      </div>
-    </article>
-
-    <!-- 03 -->
-    <article class="piece">
-      <div class="piece-id">
-        <div class="num">03 &mdash; Tool I built</div>
-        <h3>SFL Mentor Text Guide</h3>
-        <div class="piece-meta">Live &middot; four lessons<br>React + TypeScript<br><a href="https://shoegrabber.github.io/wida-explain-tool.gi/" target="_blank" rel="noopener">Open the tool &rarr;</a></div>
-      </div>
-      <div class="frame">
-        <div class="frame-row">
-          <div class="eyebrow">The demand</div>
-          <p>A sentence frame on paper is static. The student can't hear the sentence, can't see how a paragraph is assembled from language functions, and can't move the parts around to find out what happens.</p>
-        </div>
-        <div class="frame-row">
-          <div class="eyebrow">What I did</div>
-          <p>Built it. A browser tool where students drag sentences into a paragraph, colour-coded by Systemic Functional Linguistics function &mdash; Sequence, Cause &amp; Effect, How It Works, Contrast, Conclusion &mdash; with read-aloud and three levels of granularity: sentence, phrase, discourse.</p>
-        </div>
-        <div class="frame-row">
-          <div class="eyebrow">What it shows</div>
-          <p>Four lessons across Science, Social Studies and Argument, written with culturally relevant content &mdash; the Community Adaptations lessons are built on Cambodian river communities, not generic textbook examples. It runs in a browser, on a school network, with no login. <mark>Working software, not a claim about technology.</mark></p>
-        </div>
-      </div>
-    </article>
-
-    <!-- 04 -->
-    <article class="piece">
-      <div class="piece-id">
-        <div class="num">04 &mdash; Data practice</div>
+        <div class="num">01 &mdash; Data practice</div>
         <h3>From diagnostic to evidence</h3>
         <div class="piece-meta">Individual Learning Plans<br>Caseload of 16, groups of five<br>Built 2025&ndash;26</div>
       </div>
@@ -782,6 +684,119 @@ a.shotlink:hover .shot{border-color:var(--accent)}
         </div>
       </div>
     </article>
+    <!-- 02 -->
+    <article class="piece">
+      <div class="piece-id">
+        <div class="num">02 &mdash; Assessment design</div>
+        <h3>Silk Road Narrative, Tier 1 / 2 / 3</h3>
+        <div class="piece-meta">Grade 4 performance task<br>Social Studies + English<br>Three scaffold levels, one rubric</div>
+      </div>
+      <div class="frame">
+        <div class="frame-row">
+          <div class="eyebrow">The demand</div>
+          <p>A narrative performance task assessed across two subjects at once, for a cohort spanning WIDA Entering to Bridging. The standard could not move. The rubric could not move.</p>
+        </div>
+        <div class="frame-row">
+          <div class="eyebrow">What I did</div>
+          <p>Built three versions of the booklet. Put them side by side and the claim checks itself &mdash; the task prompt is <mark>word for word identical</mark> in all three.</p>
+        </div>
+
+        <div class="tiers">
+          <div class="tiers-prompt">
+            <div class="eyebrow">Identical in Tier 1, 2 and 3</div>
+            <blockquote>&ldquo;You are a storyteller. Tell the story of a merchant's journey along the Silk Road &mdash; the people, the problems, the choices, and what trade changed.&rdquo;</blockquote>
+          </div>
+          <div class="tiers-grid">
+            <div class="tier">
+              <a class="shotlink" href="evidence/silk-road-tier-1.pdf"><img class="shot" src="assets/silk-road-t1.jpg" alt="Tier 1 booklet page: dense prose describing Silk Road locations, with a four-column planning table" width="760" height="984" loading="lazy"></a>
+              <div class="tier-label">Tier 1 <span>&mdash; mainstream</span></div>
+              <ul>
+                <li>Plans independently from a <b>dense block of location prose</b> &mdash; Samarkand, the Pamir passes at 4,600m, Baghdad in the Golden Age</li>
+                <li>Process is implicit; the student decides how to work</li>
+                <li>Writes from a blank page</li>
+              </ul>
+            </div>
+            <div class="tier">
+              <a class="shotlink" href="evidence/silk-road-tier-2.pdf"><img class="shot" src="assets/silk-road-t2.jpg" alt="Tier 2 booklet page: mentor paragraph, a find task, and sentence starters above blank writing lines" width="760" height="984" loading="lazy"></a>
+              <div class="tier-label">Tier 2</div>
+              <ul>
+                <li>Same four parts, each given <b>an explicit job</b> &mdash; the Beginning is <em>who you are and why you are going</em></li>
+                <li>Work chunked into <b>three named sessions</b></li>
+                <li>Each session runs <b>READ &rarr; FIND &rarr; WRITE</b> against a mentor paragraph</li>
+              </ul>
+            </div>
+            <div class="tier">
+              <a class="shotlink" href="evidence/silk-road-tier-3.pdf"><img class="shot" src="assets/silk-road-t3.jpg" alt="Tier 3 booklet page: the same mentor paragraph with a fill-in-the-blanks paragraph and a self-check row" width="760" height="984" loading="lazy"></a>
+              <div class="tier-label">Tier 3</div>
+              <ul>
+                <li>Same structure as Tier 2, with the Beginning reduced to <em>who you are and <b>where</b> you are going</em></li>
+                <li>Mentor paragraph supplied for every part</li>
+                <li>Writing happens in <b>completion frames</b>, not open prose</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tiers-note">Same page of the same task in each booklet. What changes across the tiers is that the writing <em>process</em> becomes visible and the language gets supplied. What never changes is the task, the four-part narrative structure, or what the rubric rewards.</div>
+        </div>
+
+        <div class="frame-row">
+          <div class="eyebrow">The booklets</div>
+          <div class="docs"><a class="dl" href="evidence/silk-road-tier-1.pdf">Tier 1 &middot; mainstream</a><a class="dl" href="evidence/silk-road-tier-2.pdf">Tier 2</a><a class="dl" href="evidence/silk-road-tier-3.pdf">Tier 3</a></div>
+        </div>
+        <div class="frame-row">
+          <div class="eyebrow">What it shows</div>
+          <p>This is the hardest thing to claim credibly in an interview and the easiest to demonstrate on paper: differentiation that reduces the language barrier without reducing the standard.</p>
+        </div>
+      </div>
+    </article>
+    <!-- 03 -->
+    <article class="piece">
+      <div class="piece-id">
+        <div class="num">03 &mdash; Framework</div>
+        <h3>Principles for Good MLL Assessment Scaffolding</h3>
+        <div class="piece-meta">Written 2026<br>My own working method<br>Shared with the MLL team</div>
+      </div>
+      <div class="frame">
+        <div class="frame-row">
+          <div class="eyebrow">The demand</div>
+          <p>I needed a consistent answer to the question that actually matters, and I needed it to be the same answer every time: at what point does support stop being support and start doing the thinking for the student? Working it out case by case produces scaffolds that drift.</p>
+        </div>
+        <div class="frame-row">
+          <div class="eyebrow">What I did</div>
+          <p>Wrote the method down for myself. Three stages &mdash; understand what was taught, analyse the mainstream assessment, then make deliberate scaffold decisions <em>before</em> building anything. Eight design principles and a quality checklist underneath. I then used the document as the <em>specification</em> for AI-assisted scaffold production, so the same standard applied whether I built a booklet by hand or with a tool. <mark>Writing my method down precisely enough that a machine could follow it is what made it repeatable.</mark></p>
+        </div>
+        <div class="frame-row">
+          <div class="eyebrow">What it shows</div>
+          <p>The principles are counterintuitive in a way that only comes from doing the work. One of them is about visual weight: <mark>if the mainstream handout has one organiser and a list of frames, the scaffolded version should also look like one organiser and a list of frames.</mark> More visible sections read as <em>harder</em> to a student, even when every section is simpler. Good scaffolding is invisible support &mdash; a helping hand, not a different task.</p>
+          <p style="margin-top:10px">That principle is a graphic design judgement applied to assessment equity, and I notice it because I trained as a designer before I trained as a teacher.</p>
+          <div class="docs"><span class="lbl">Read</span><a class="dl page" href="evidence/principles-assessment-scaffolding.html">The full framework</a></div>
+        </div>
+      </div>
+    </article>
+    <!-- 04 -->
+    <article class="piece">
+      <div class="piece-id">
+        <div class="num">04 &mdash; Tool I built</div>
+        <h3>SFL Mentor Text Guide</h3>
+        <div class="piece-meta">Live &middot; four lessons<br>React + TypeScript<br>Proof of concept<br><a href="https://shoegrabber.github.io/wida-explain-tool.gi/" target="_blank" rel="noopener">Open the tool &rarr;</a></div>
+      </div>
+      <div class="frame">
+        <div class="frame-row">
+          <div class="eyebrow">The demand</div>
+          <p>A sentence frame on paper is static. The student can't hear the sentence, can't see how a paragraph is assembled from language functions, and can't move the parts around to find out what happens.</p>
+        </div>
+        <div class="frame-row">
+          <div class="eyebrow">What I did</div>
+          <a class="shotlink" href="https://shoegrabber.github.io/wida-explain-tool.gi/" target="_blank" rel="noopener"><img class="shot" src="assets/sfl-tool.jpg" alt="The SFL Mentor Text Guide open on a lesson: a sentence bank on the left, and a paragraph of colour-coded sentences about communities adapting to their environment" width="1280" height="853" loading="lazy"></a>
+          <p class="cap">Grade 4 Social Studies &mdash; Community Adaptations (Cause &amp; Effect). Sentence bank left, mentor paragraph right, colour by language function.</p>
+          <p style="margin-top:14px">Built it. A browser tool where students drag sentences into a paragraph, colour-coded by Systemic Functional Linguistics function &mdash; Sequence, Cause &amp; Effect, How It Works, Contrast, Conclusion &mdash; with read-aloud and three levels of granularity: sentence, phrase, discourse.</p>
+        </div>
+        <div class="frame-row">
+          <div class="eyebrow">What it shows</div>
+          <p>Four lessons across Science, Social Studies and Argument, written with culturally relevant content &mdash; the Community Adaptations lessons are built on Cambodian river communities, not generic textbook examples. It runs in a browser, on a school network, with no login. <mark>Working software, not a claim about technology.</mark></p>
+          <p style="margin-top:10px;font-size:.92rem;color:var(--ink-faint)">A proof of concept &mdash; I built and shipped it, but it was never put in front of a class. I am showing it as evidence of what I can build, not as a classroom result.</p>
+        </div>
+      </div>
+    </article>
   </section>
 
   <!-- ================= SUPPORTING ================= -->
@@ -803,6 +818,10 @@ a.shotlink:hover .shot{border-color:var(--accent)}
       </div>
 
       <div class="card">
+        <div class="pair" style="margin-bottom:4px">
+          <div style="padding:0;background:transparent"><img class="shot" src="assets/moodometer-1.jpg" alt="Moodometer mode one: a blue sine wave with happiness, energy and focus sliders, and the sentence my happiness is medium, my energy is medium, and my focus is medium today" width="820" height="670" loading="lazy"></div>
+          <div style="padding:0;background:transparent"><img class="shot" src="assets/moodometer-2.jpg" alt="Moodometer mode two: the same wave on a dark ground with amplitude, frequency and speed sliders, and the sentence this wave has medium amplitude and medium frequency" width="820" height="670" loading="lazy"></div>
+        </div>
         <div class="eyebrow">Technology &middot; live</div>
         <h4>Moodometer</h4>
         <p>One wave, two registers. Mode 1 is a CASEL check-in: <em>my energy is medium</em>. Mode 2 relabels the identical wave as physics: <em>this wave has medium amplitude</em>. Same sentence frame, so the grammar is already owned before the vocabulary arrives.</p>
@@ -843,12 +862,19 @@ a.shotlink:hover .shot{border-color:var(--accent)}
         <div class="docs"><a class="dl" href="evidence/math-language-lab.pdf">Math Language Lab</a><a class="dl" href="evidence/student-task-checklist.pdf">Task checklist</a></div>
       </div>
 
-      <div class="card">
+      <div class="card feature">
+        <figure>
+          <img class="shot" src="assets/magazine-cover.jpg" alt="Our Words Our World cover: a globe formed from the words for hello and belonging in many languages, above the line voice, belonging, language and student growth" width="720" height="1018" loading="lazy">
+          <figcaption class="cap">Cover &mdash; Issue #1, June 2026. Cover, layout and typesetting mine.</figcaption>
+        </figure>
+        <div class="fc-txt">
         <div class="eyebrow">Community &middot; writing</div>
         <h4>Our Words, Our World</h4>
         <p>A community publication I initiated, edited <em>and designed</em>, June 2026 &mdash; every page laid out by me, alongside families, teachers and students writing about home, language and belonging. My own essay in it, <em>The Scaffold and the Self</em>, argues the position underneath all of this: <mark>the scaffold doesn't replace thinking, it makes more thinking possible.</mark></p>
         <p style="font-size:.88rem;color:var(--ink-faint);line-height:1.5">Published by the school and circulated in its newsletter. My essay is on pages 10&ndash;11; the layout throughout is mine.</p>
         <div class="docs"><a class="dl page" href="https://heyzine.com/flip-book/a1fff1a0d4.html" target="_blank" rel="noopener">Read the publication</a></div>
+        <img src="assets/magazine-qr.jpg" alt="QR code linking to the Our Words Our World publication" width="420" height="420" style="width:96px;height:96px;border:1px solid var(--rule);border-radius:3px;margin-top:4px">
+        </div>
       </div>
 
     </div>
@@ -946,7 +972,26 @@ a.shotlink:hover .shot{border-color:var(--accent)}
       </div>
     </div>
 
-    <div class="note">Draft v10 &mdash; for Ben's review. Still open: phone number and LinkedIn are not included pending your call; artefact PDFs are not yet attached.</div>
   </footer>
 
 </div>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme-toggle');
+  if(!btn) return;
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  function stored(){ try{ return localStorage.getItem('bfc-theme'); }catch(e){ return null; } }
+  function current(){ var t=root.getAttribute('data-theme'); return t ? t : (mq.matches?'dark':'light'); }
+  function paint(){ btn.textContent = current()==='dark' ? 'Light' : 'Dark'; }
+  var saved=stored(); if(saved==='dark'||saved==='light') root.setAttribute('data-theme',saved);
+  paint();
+  btn.addEventListener('click',function(){
+    var next = current()==='dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme',next);
+    try{ localStorage.setItem('bfc-theme',next); }catch(e){}
+    paint();
+  });
+  try{ mq.addEventListener('change',function(){ if(!stored()) paint(); }); }catch(e){}
+})();
+</script>
